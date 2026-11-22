@@ -4,7 +4,7 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "functions": {
-    "api/[...path].ts": {
+    "api/**/*.ts": {
       "maxDuration": 300
     }
   }

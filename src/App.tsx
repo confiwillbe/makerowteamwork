@@ -263,7 +263,7 @@ function AuthScreen({ mode, setMode, onSubmit, busy, toast }: { mode: 'login' | 
       </form>
       <div className="auth-security"><ShieldCheck size={14}/><span>Защищённая авторизация · пароли зашифрованы</span></div>
       {toast && <div className={`auth-toast ${toast.kind}`}>{toast.message}</div>}
-      <div className="auth-foot">НЕТ ИНВАЙТА? <span>Обратись к администратору команды</span></div>
+      <div className="auth-foot">НЕТ ИНВАЙТА? <a href="https://discord.gg/CEp9XpZmZZ" target="_blank" rel="noopener noreferrer">Обратись к администратору команды</a></div>
     </div></div>
   </div>;
 }

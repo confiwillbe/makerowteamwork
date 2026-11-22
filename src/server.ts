@@ -46,7 +46,7 @@ let pool: Pool | undefined;
 let schemaPromise: Promise<void> | null = null;
 
 function getPool(): Pool {
-  const connectionString = process.env.DATABASE_URL?.trim();
+  const connectionString = (process.env.DATABASE_URL || process.env.POSTGRES_URL || process.env.POSTGRES_URL_NON_POOLING || process.env.DATABASE_URL_UNPOOLED || '').trim();
   if (!connectionString) throw new Error('На Vercel не задан DATABASE_URL. Подключи Neon Postgres в Storage → Connect.');
   if (!pool) pool = new Pool({ connectionString, max: 3 });
   return pool;
